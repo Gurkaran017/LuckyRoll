@@ -33,7 +33,7 @@ const RegisterPage = () => {
       return;
     }
     try {
-      const { data } = await axios.post("http://127.0.0.1:5000/api/login", {
+      const { data } = await axios.post("https://luckyroll-7vn4.onrender.com/api/login", {
         email,
         password,
       });
@@ -72,7 +72,7 @@ const RegisterPage = () => {
       return;
     }
     try {
-      const { data } = await axios.post("http://127.0.0.1:5000/api/signup", {
+      const { data } = await axios.post("https://luckyroll-7vn4.onrender.com/api/signup", {
         email,
         name,
         password,
@@ -86,7 +86,7 @@ const RegisterPage = () => {
         setTimeout(() => {
           navigate("/homepage");
         }, 2000);
-        const mailer = await axios.post("http://127.0.0.1:5000/api/mail", {
+        const mailer = await axios.post("https://luckyroll-7vn4.onrender.com/api/mail", {
           email,
         });
         console.log(initialAuthUser.email);

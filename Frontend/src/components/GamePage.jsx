@@ -47,7 +47,7 @@ const GamePage = () => {
   const SearchOpen = async () => {
     try {
       const res = await axios.get(
-        `http://127.0.0.1:5000/api/Players?search=${Search}`
+        `https://luckyroll-7vn4.onrender.com/api/Players?search=${Search}`
       );
       if (res.data.players && res.data.players.length === 0) {
         console.log("No players found");
@@ -122,7 +122,7 @@ const GamePage = () => {
 
       if (email) {
         try {
-          await axios.post("http://127.0.0.1:5000/api/changeScore", {
+          await axios.post("https://luckyroll-7vn4.onrender.com/api/changeScore", {
             email,
             highScore,
           });

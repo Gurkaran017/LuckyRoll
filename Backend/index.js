@@ -14,13 +14,13 @@ const Nodemailer = require("./Route/Nodemailer")
 const path = require('path');
 
 
-// app.use(cors({
-//   credentials:true,
-//   origin:"http://localhost:5173"
-//   }))
+app.use(cors({
+  credentials:true,
+  origin:"https://luckyroll-7vn4.onrender.com"
+  }))
 
   
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 dotenv.config();
 connectDB();
