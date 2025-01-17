@@ -144,7 +144,7 @@ const GamePage = () => {
     <>
       <div className="min-h-screen bg-cover bg-fixed bg-no-repeat overflow-hidden "
       style={{backgroundImage: `url(${sun?gameplay_background:gameplay_backgroundBW})`}}>
-        <div className="flex justify-between items-center mt-2 m-5">
+        <div className="relative flex justify-between items-center mt-2 m-5">
         <div
   className="absolute m-2 md:ml-6 ml-36 mt-3 text-4xl cursor-pointer text-blue-800 hover:text-yellow-500 transition-colors duration-300"
   aria-label={sun ? "Switch to Moon Mode" : "Switch to Sun Mode"}
@@ -167,7 +167,7 @@ const GamePage = () => {
           </div>
           <div className="flex items-center justify-end md:mx-5">
             <input
-              className={`px-4 py-1 ${sun? "bg-slate-100" : "bg-gray-500"} rounded-2xl border-black border-2 pr-8 w-44  md:w-auto`}
+              className={`px-4 py-1 ${sun? "bg-slate-100" : "bg-gray-500"} rounded-2xl border-black border-2 pr-8 w-36  md:w-auto`}
               placeholder="Search Players . . ."
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -227,7 +227,7 @@ const GamePage = () => {
                 <div className="flex justify-center my-1">
                   <button
                     onClick={openModal}
-                    className={`bg-black text-white py-1 px-16 rounded-md ${sun?"hover:bg-[#6fc2cd]":"hover:bg-gray-500"} hover:font-bold hover:text-black border-black border-2 duration-300 hover:ease-in-out`}
+                    className={`bg-black text-white py-1 px-16 mb-10 rounded-md ${sun?"hover:bg-[#6fc2cd]":"hover:bg-gray-500"} hover:font-bold hover:text-black border-black border-2 duration-300 hover:ease-in-out`}
                   >
                     Show Rules
                   </button>
